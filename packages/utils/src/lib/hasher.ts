@@ -1,8 +1,8 @@
-import { Hasher } from '@nrwl/devkit';
+import { Hasher } from '@nx/devkit';
 import { warning } from './logger';
 import { getExecutorForTask } from './workspace';
 
-import type { ProjectGraph, NxJsonConfiguration, TaskGraph, WorkspaceConfiguration, Hash } from '@nrwl/devkit';
+import type { ProjectGraph, NxJsonConfiguration, TaskGraph, WorkspaceConfiguration, Hash } from '@nx/devkit';
 import type { Task } from './task';
 import type { Workspaces } from './workspace';
 

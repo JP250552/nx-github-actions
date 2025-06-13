@@ -5,7 +5,7 @@ import { calculateFileChanges, TEN_MEGABYTES } from 'nx/src/project-graph/file-u
 import { filterNodes, withDeps } from 'nx/src/project-graph/operators';
 import { projectHasTarget } from 'nx/src/utils/project-graph-utils';
 
-import type { ProjectGraph, ProjectGraphProjectNode } from '@nrwl/devkit';
+import type { ProjectGraph, ProjectGraphProjectNode } from '@nx/devkit';
 import type { NxArgs } from 'nx/src/utils/command-line-utils';
 
 function filterByPredicate(

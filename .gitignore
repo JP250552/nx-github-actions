@@ -35,6 +35,7 @@ testem.log
 /typings
 
 # Nx related
+.nx
 migrations.json
 
 # System Files

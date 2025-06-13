@@ -1,7 +1,7 @@
 import type * as Core from '@actions/core';
 
 import { NxArgs, splitArgsIntoNxArgsAndOverrides } from 'nx/src/utils/command-line-utils';
-import { readNxJson } from '@nrwl/devkit';
+import { readNxJson } from '@nx/devkit';
 
 import { debug, log, logger, warning } from './logger';
 import { join } from 'path';

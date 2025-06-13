@@ -10,17 +10,6 @@
     },
     ".eslintrc.json": "*"
   },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "Y2NkZDUyZjktNzc5MS00MTBmLTliNDMtZjg1YjJhZGFiMzlmfHJlYWQtd3JpdGU=",
-        "canTrackAnalytics": false,
-        "showUsageWarnings": true
-      }
-    }
-  },
   "workspaceLayout": {
     "appsDir": "packages",
     "libsDir": "packages"
@@ -34,7 +23,7 @@
     ]
   },
   "cli": {
-    "defaultCollection": "@nrwl/node"
+    "defaultCollection": "@nx/node"
   },
   "defaultProject": "nx-distributed-task"
 }

@@ -5,7 +5,7 @@ import { getOutputs } from 'nx/src/tasks-runner/utils';
 import { createHasher, hashTask } from './hasher';
 import { Workspaces } from './workspace';
 
-import type { ProjectGraphProjectNode, NxJsonConfiguration, ProjectGraph, TaskGraph } from '@nrwl/devkit';
+import type { ProjectGraphProjectNode, NxJsonConfiguration, ProjectGraph, TaskGraph } from '@nx/devkit';
 import type { Task } from './task';
 import type { NxArgs } from 'nx/src/utils/command-line-utils';
 

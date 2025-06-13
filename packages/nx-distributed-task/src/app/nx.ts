@@ -1,5 +1,5 @@
 import type { context as Context } from '@actions/github';
-import { getPackageManagerCommand, getPackageManagerVersion, names } from '@nrwl/devkit';
+import { getPackageManagerCommand, getPackageManagerVersion, names } from '@nx/devkit';
 import { NxArgs } from 'nx/src/utils/command-line-utils';
 
 import { Exec } from '@e-square/utils/exec';
@@ -10,9 +10,7 @@ export async function assertNxInstalled(exec: Exec) {
 
   debug(`Checking existence of nx`);
 
-  let path = '';
-  path = await exec.withCommand(`${command} @nrwl/cli -p --depth 1`).build()();
-  if (!path) path = await exec.withCommand(`${command} nx -p --depth 1`).build()();
+  const path = await exec.withCommand(`${command} nx -p --depth 1`).build()();
 
   debug(`NX bin path: ${path}`);
 
@@ -42,9 +40,6 @@ export async function nxCommand(nxCommand: string, args: NxArgs, exec: Exec): Pr
   const isYarn = command === 'yarn';
   if (isNpx && Number(pmMajorVersion) > 6) {
     command += ' --no';
-  }
-  if (isNpx || isYarn) {
-    command += nxMajorVersion >= '16' ? '' : ` -p @nrwl/cli`;
   }
 
   const wrapper = exec

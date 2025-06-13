@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 import { workspaceRoot } from 'nx/src/utils/app-root';
 
-import type { Tree } from '@nrwl/devkit';
+import type { Tree } from '@nx/devkit';
 
 export class GHTree implements Tree {
   readonly root: string;

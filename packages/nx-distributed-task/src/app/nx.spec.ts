@@ -4,7 +4,7 @@ import { context } from '@actions/github';
 import { Exec } from '@e-square/utils/exec';
 import { logger } from '@e-square/utils/logger';
 import { assertNxInstalled, nxCommand, nxRunMany } from './nx';
-import { PackageManager } from '@nrwl/devkit';
+import { PackageManager } from '@nx/devkit';
 
 jest.mock('child_process');
 jest.mock('fs');
