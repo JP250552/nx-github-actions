@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { dirname, join } from 'path';
 
-import { Workspaces as NxWorkspaces, WorkspaceJsonConfiguration } from '@nrwl/devkit';
+import { Workspaces as NxWorkspaces, WorkspaceJsonConfiguration } from '@nx/devkit';
 import {
   buildWorkspaceConfigurationFromGlobs,
   globForProjectFiles,
@@ -16,11 +16,11 @@ import {
   readJsonFile,
   readProjectConfiguration,
   readWorkspaceConfiguration,
-} from '@nrwl/devkit';
+} from '@nx/devkit';
 
 import { tree } from './fs';
 import type { Task } from './task';
-import type { NxPlugin } from '@nrwl/devkit';
+import type { NxPlugin } from '@nx/devkit';
 
 function findFullGeneratorName(
   name: string,

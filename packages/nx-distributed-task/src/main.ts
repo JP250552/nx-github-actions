@@ -2,7 +2,7 @@ import type * as _core from '@actions/core';
 import type * as _exec from '@actions/exec';
 import type * as _glob from '@actions/glob';
 import type { context as Context } from '@actions/github';
-import { createProjectGraphAsync, readNxJson } from '@nrwl/devkit';
+import { createProjectGraphAsync, readNxJson } from '@nx/devkit';
 
 import { Exec } from '@e-square/utils/exec';
 import { info } from '@e-square/utils/logger';

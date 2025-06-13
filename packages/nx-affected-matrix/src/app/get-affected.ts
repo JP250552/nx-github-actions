@@ -1,10 +1,10 @@
-import { createProjectGraphAsync, readNxJson } from '@nrwl/devkit';
+import { createProjectGraphAsync, readNxJson } from '@nx/devkit';
 
 import { mapToProjectName, projectsToRun } from '@e-square/utils/project-graph';
 import { createTaskGraph } from '@e-square/utils/task-graph';
 import { Workspaces } from '@e-square/utils/workspace';
 
-import type { ProjectGraph, TaskGraph } from '@nrwl/devkit';
+import type { ProjectGraph, TaskGraph } from '@nx/devkit';
 import type { NxArgs } from 'nx/src/utils/command-line-utils';
 import type { Task } from '@e-square/utils/task';
 import { tree } from '@e-square/utils/fs';
