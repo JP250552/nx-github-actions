@@ -31,11 +31,15 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: e-square-io/.github/.github/actions/npm-ci@main
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 22
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
           cache: pnpm
 
       - name: Run semantic-release locally
@@ -64,7 +68,7 @@ jobs:
     needs: [setup, execute]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Download artifacts
         uses: actions/download-artifact@v2
@@ -87,12 +91,15 @@ jobs:
     needs: [setup, execute]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: e-square-io/.github/.github/actions/npm-ci@main
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 22
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
           cache: pnpm
 
       - name: Download artifacts
